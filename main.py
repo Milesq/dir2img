@@ -10,6 +10,7 @@ else: raise f'The {sys.argv[1]} path doesn\'t exist'
 files = listdir.listdir(sys.argv[1])
 files = listdir.flattenDict(files)
 files = listdir.flatten(files)
+files = listdir.excludeType(files)
 
 img = createImg()
 

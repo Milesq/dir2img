@@ -24,3 +24,7 @@ def flattenDict(obj):
 		if obj[i] != None:
 			ret.append(flattenDict(obj[i]))
 	return ret
+def excludeType(list, directory=True):
+	for i in list:
+		if directory != isdir(i):
+			yield i

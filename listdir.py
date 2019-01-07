@@ -11,3 +11,16 @@ def listdir(path='./'):
 			ret[absPath] = None
 
 	return ret
+
+def flatten(l):
+	for i in l:
+		if type(i) == type([]):
+			for j in flatten(i): yield j
+		else: yield i
+
+def flattenDict(obj):
+	ret = [x for x in obj]
+	for i in obj:
+		if obj[i] != None:
+			ret.append(flattenDict(obj[i]))
+	return ret

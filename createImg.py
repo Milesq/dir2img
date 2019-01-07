@@ -12,6 +12,8 @@ class createImg:
 		self.y = 0
 
 	def next(self):
+		if self.y >= self.size-1:
+			return (0, 0)
 		if self.x >= self.size-1:
 			self.x = 0
 			self.y += 1
@@ -39,6 +41,7 @@ class createImg:
 		pixs = self.img.load()
 
 		for i in self.files:
+			print(f'Przetwarzanie {i}')
 			fileSize = int((os.path.getsize(i) % 8192) / 3)
 			content = createImg.getFile(i)
 			

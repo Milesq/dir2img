@@ -1,1 +1,1 @@
-nodemon -q main.py test/
+@nodemon -q main.py jasmine/

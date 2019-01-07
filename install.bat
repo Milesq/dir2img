@@ -1,0 +1,1 @@
+nodemon -q main.py test/

@@ -18,5 +18,5 @@ for path in files:
 	img.addFile(path)
 
 img.commit()
-# img.save('image.jpg')
-# img.img.show()
+img.save('image.jpg')
+img.img.show()

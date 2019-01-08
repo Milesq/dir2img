@@ -35,14 +35,14 @@ class createImg:
 		self.files.append(path)
 
 	def commit(self):
-		self.size = int((self.size % 8192) / 3)
+		self.size = int(self.size / 3)
 		self.size = int(sqrt(self.size)) + 1
 		self.img = Image.new('RGB', (self.size, self.size), 'white')
 		pixs = self.img.load()
 
 		for i in self.files:
 			print(f'Przetwarzanie {i}')
-			fileSize = int((os.path.getsize(i) % 8192) / 3)
+			fileSize = int(os.path.getsize(i) / 3)
 			content = createImg.getFile(i)
 			
 			j = 0
